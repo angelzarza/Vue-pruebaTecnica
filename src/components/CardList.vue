@@ -16,6 +16,7 @@ export default {
   name: "CardList",
   data() {
     return {
+      db: [],
       headers: [
         {
           text: "Nombre y Apellidos",
@@ -110,6 +111,19 @@ export default {
         },
       ],
     };
+  },
+
+  mounted: function () {
+    const axios = require("axios");
+    axios
+      .get("https://my-json-server.typicode.com/typicode/demo/db")
+      .then((response) => {
+        this.db = response.data;
+        console.log(response);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   },
 };
 </script>
