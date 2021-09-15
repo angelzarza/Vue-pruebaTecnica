@@ -25,11 +25,11 @@
         <ButtonsViews />
       </v-col>
     </v-row>
-    <v-row>
+    <!-- <v-row>
       <v-col cols="12">
         <ButtonsList />
       </v-col>
-    </v-row>
+    </v-row> -->
     <v-row>
       <v-col cols="12">
         <CardList />
@@ -48,7 +48,7 @@ import Search from "../components/Search";
 import ButtonNew from "../components/ButtonNew";
 import ButtonCSV from "../components/ButtonCSV";
 import ButtonsViews from "../components/ButtonsViews";
-import ButtonsList from "../components/ButtonsList";
+// import ButtonsList from "../components/ButtonsList";
 import CardList from "../components/CardList";
 import Pagination from "../components/Pagination";
 
@@ -60,7 +60,7 @@ export default {
     ButtonNew,
     ButtonCSV,
     ButtonsViews,
-    ButtonsList,
+    // ButtonsList,
     CardList,
     Pagination,
   },
