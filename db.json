@@ -3,8 +3,6 @@
 		"datos_paciente":{
 			"nombre": "Andres",
 			"apellidos": "Anton",
-			"fecha_nacimiento": "12/04/1978",
-			"sexo": "M"
 		}
 	}
 }
