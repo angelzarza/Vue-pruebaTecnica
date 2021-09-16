@@ -3,8 +3,8 @@
     <v-card>
       <v-data-table
         :headers="headers"
-        :items="db"
-        hide-default-footer
+        :items="users"
+        :items-per-page="5"
         class="elevation-1"
       ></v-data-table>
     </v-card>
@@ -12,20 +12,25 @@
 </template>
 
 <script>
+import usersData from "../assets/json/pacientes.json";
+
 export default {
   name: "CardList",
   data() {
     return {
-      db: [],
+      users: usersData,
       headers: [
         {
           text: "Nombre y Apellidos",
           value: "datos_paciente.nombre",
         },
-        { text: "Clínica", value: "email" },
-        { text: "Objetivo Tratamiento", value: "username" },
-        { text: "Estado", value: "phone" },
-        { text: "Acciones", value: "website" },
+        { text: "Clínica", value: "ficha_dental.clinica" },
+        {
+          text: "Objetivo Tratamiento",
+          value: "ficha_dental.acadas_tratamiento",
+        },
+        { text: "Estado", value: "ficha_dental.estado" },
+        { text: "Acciones", value: "ficha_dental.estado" },
       ],
       // items: [
       //   {
@@ -40,21 +45,18 @@ export default {
     };
   },
 
-  mounted: function () {
-    const axios = require("axios");
-    // https://my-json-server.typicode.com/typicode/demo/db
-    // axios
-    //.get("http://localhost:8080/typicode/demo/db")
-    axios
-      .get("http://localhost:8080/angelzarza/prueba-tecnica/db")
-      .then((response) => {
-        this.db = response.data;
-        console.log(response);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  },
+  // mounted: function () {
+  //   const axios = require("axios");
+  //   axios
+  //     .get("http://localhost:8080/angelzarza/prueba-tecnica/db")
+  //     .then((response) => {
+  //       this.db = response.data;
+  //       console.log(response);
+  //     })
+  //     .catch((error) => {
+  //       console.log(error);
+  //     });
+  // },
 };
 </script>
 
