@@ -46,7 +46,7 @@ export default {
     // axios
     //.get("http://localhost:8080/typicode/demo/db")
     axios
-      .get("http://localhost:8080/angelzarza/prueba-tecnica/users")
+      .get("http://localhost:8080/angelzarza/prueba-tecnica/db")
       .then((response) => {
         this.db = response.data;
         console.log(response);
