@@ -1,5 +1,5 @@
 <template>
-  <vue-json-to-csv :json-data="users" :csv-title="'test'">
+  <vue-json-to-csv :json-data="users" :csv-title="'Pacientes'">
     <v-btn outlined color="blue" class="ma-2 white--text">
       Descargar CSV
       <v-icon right dark> mdi-download </v-icon>

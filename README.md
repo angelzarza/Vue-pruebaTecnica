@@ -2,7 +2,7 @@
 
 - Preparando el repositorio y el template del proyecto (10min)
 
-- Maquetación de la plantilla (3h 30min)
+- Maquetación de la plantilla con algunas funcionalidades responsivas (3h 30min)
 
 - Probando json remoto con axios, problemas con axios, descartado (2h)
 
@@ -13,6 +13,8 @@ pacientes, me ocasiona problemas mostrar busquedas tanto por nombre como por ape
 funciona una u otra opción debido al formato del json al no tener un campo fullName (3h)
 
 - Botón de exportación de CSV, queda retocar la exportación para que muestre datos completos (30min)
+
+- Ventana nuevo paciente con clases SASS (1h)
 
 ## Project setup
 ```

@@ -72,26 +72,6 @@ export default {
       else if (state == "fabricando") return "grey";
       else return "green";
     },
-
-    // customSearch(items) {
-    //   return items.ficha_dental.acadas_tratamiento;
-    // },
-    // customSearch(items, search, filter) {
-    //   search = search.toString().toLowerCase();
-    //   return items.filter((row) => filter(row["Nombre y Apellidos"], search));
-    // },
-    // customSearch(value, search, item) {
-    //   if (Array.isArray(value)) {
-    //     return value.some((item) =>
-    //       Object.values(item).some(
-    //         (v) => v && v.toString().toLowerCase().includes(search)
-    //       )
-    //     );
-    //   }
-    //   return Object.values(item).some(
-    //     (v) => v && v.toString().toLowerCase().includes(search)
-    //   );
-    // },
   },
 };
 </script>
