@@ -20,12 +20,12 @@ export default {
       headers: [
         {
           text: "Nombre y Apellidos",
-          value: "name",
+          value: "datos_paciente",
         },
-        { text: "Clínica", value: "email" },
-        { text: "Objetivo Tratamiento", value: "username" },
-        { text: "Estado", value: "phone" },
-        { text: "Acciones", value: "website" },
+        // { text: "Clínica", value: "email" },
+        // { text: "Objetivo Tratamiento", value: "username" },
+        // { text: "Estado", value: "phone" },
+        // { text: "Acciones", value: "website" },
       ],
       // items: [
       //   {
@@ -42,8 +42,11 @@ export default {
 
   mounted: function () {
     const axios = require("axios");
+
     axios
-      .get("https://my-json-server.typicode.com/angelzarza/prueba-tecnica")
+      .get(
+        "http://localhost:8080/angelzarza/prueba-tecnica/607de0be7232c/datos_paciente"
+      )
       .then((response) => {
         this.db = response.data;
         console.log(response);
