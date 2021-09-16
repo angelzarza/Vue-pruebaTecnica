@@ -1,6 +1,11 @@
 <template>
   <v-form>
-    <v-text-field outlined filled placeholder="Buscar..."></v-text-field>
+    <v-text-field
+      outlined
+      filled
+      append-icon="mdi-magnify"
+      placeholder="Buscar..."
+    ></v-text-field>
   </v-form>
 </template>
 

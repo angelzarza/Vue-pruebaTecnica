@@ -1,12 +1,37 @@
 <template>
   <v-container>
     <v-card>
+      <v-card-title>
+        Pacientes
+        <v-spacer></v-spacer>
+        <v-text-field
+          v-model="search"
+          append-icon="mdi-magnify"
+          label="Search"
+          single-line
+          hide-details
+        ></v-text-field>
+      </v-card-title>
       <v-data-table
         :headers="headers"
         :items="users"
         :items-per-page="5"
+        :search="search"
         class="elevation-1"
-      ></v-data-table>
+      >
+        <template v-slot:[`item.datos_paciente.nombre`]="{ item }"
+          >{{ item.datos_paciente.nombre }}
+          {{ item.datos_paciente.apellidos }}</template
+        >
+        <template v-slot:[`item.ficha_dental.estado`]="{ item }">
+          <v-chip :color="getColor(item.ficha_dental.estado)" dark>
+            {{ item.ficha_dental.estado }}
+          </v-chip>
+        </template>
+        <template v-slot:[`item.options`]>
+          <v-select v-model="selectDefault" :items="drop"></v-select>
+        </template>
+      </v-data-table>
     </v-card>
   </v-container>
 </template>
@@ -18,7 +43,11 @@ export default {
   name: "CardList",
   data() {
     return {
+      search: "",
       users: usersData,
+
+      selectDefault: "Editar",
+      drop: ["Editar", "Finalizar", "Borrar"],
       headers: [
         {
           text: "Nombre y Apellidos",
@@ -30,33 +59,40 @@ export default {
           value: "ficha_dental.acadas_tratamiento",
         },
         { text: "Estado", value: "ficha_dental.estado" },
-        { text: "Acciones", value: "ficha_dental.estado" },
+        { text: "Acciones", value: "options" },
       ],
-      // items: [
-      //   {
-      //     name: "Frozen Yogurt",
-      //     calories: 159,
-      //     fat: 6.0,
-      //     carbs: 24,
-      //     protein: 4.0,
-      //     iron: "1%",
-      //   },
-      // ],
     };
   },
 
-  // mounted: function () {
-  //   const axios = require("axios");
-  //   axios
-  //     .get("http://localhost:8080/angelzarza/prueba-tecnica/db")
-  //     .then((response) => {
-  //       this.db = response.data;
-  //       console.log(response);
-  //     })
-  //     .catch((error) => {
-  //       console.log(error);
-  //     });
-  // },
+  methods: {
+    getColor(state) {
+      if (state == "planificando") return "red";
+      else if (state == "facturado") return "orange";
+      else if (state == "solicitado") return "blue";
+      else if (state == "fabricando") return "grey";
+      else return "green";
+    },
+
+    // customSearch(items) {
+    //   return items.ficha_dental.acadas_tratamiento;
+    // },
+    // customSearch(items, search, filter) {
+    //   search = search.toString().toLowerCase();
+    //   return items.filter((row) => filter(row["Nombre y Apellidos"], search));
+    // },
+    // customSearch(value, search, item) {
+    //   if (Array.isArray(value)) {
+    //     return value.some((item) =>
+    //       Object.values(item).some(
+    //         (v) => v && v.toString().toLowerCase().includes(search)
+    //       )
+    //     );
+    //   }
+    //   return Object.values(item).some(
+    //     (v) => v && v.toString().toLowerCase().includes(search)
+    //   );
+    // },
+  },
 };
 </script>
 
