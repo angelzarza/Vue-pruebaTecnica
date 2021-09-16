@@ -20,7 +20,7 @@ export default {
       headers: [
         {
           text: "Nombre y Apellidos",
-          value: "post.id",
+          value: "datos_paciente.nombre",
         },
         { text: "Clínica", value: "email" },
         { text: "Objetivo Tratamiento", value: "username" },
@@ -46,7 +46,7 @@ export default {
     // axios
     //.get("http://localhost:8080/typicode/demo/db")
     axios
-      .get("http://localhost:8080/angelzarza/prueba-tecnica/post")
+      .get("http://localhost:8080/angelzarza/prueba-tecnica/users")
       .then((response) => {
         this.db = response.data;
         console.log(response);
