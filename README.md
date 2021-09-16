@@ -12,6 +12,8 @@
 pacientes, me ocasiona problemas mostrar busquedas tanto por nombre como por apellido, solo 
 funciona una u otra opción debido al formato del json al no tener un campo fullName (3h)
 
+- Botón de exportación de CSV, queda retocar la exportación para que muestre datos completos (30min)
+
 ## Project setup
 ```
 npm install
