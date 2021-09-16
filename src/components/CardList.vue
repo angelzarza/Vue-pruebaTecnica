@@ -4,7 +4,7 @@
       <v-data-table
         :headers="headers"
         :items="db"
-        :items-per-page="5"
+        hide-default-footer
         class="elevation-1"
       ></v-data-table>
     </v-card>
@@ -20,12 +20,12 @@ export default {
       headers: [
         {
           text: "Nombre y Apellidos",
-          value: "datos_paciente",
+          value: "post.id",
         },
-        // { text: "Clínica", value: "email" },
-        // { text: "Objetivo Tratamiento", value: "username" },
-        // { text: "Estado", value: "phone" },
-        // { text: "Acciones", value: "website" },
+        { text: "Clínica", value: "email" },
+        { text: "Objetivo Tratamiento", value: "username" },
+        { text: "Estado", value: "phone" },
+        { text: "Acciones", value: "website" },
       ],
       // items: [
       //   {
@@ -42,9 +42,11 @@ export default {
 
   mounted: function () {
     const axios = require("axios");
-
+    // https://my-json-server.typicode.com/typicode/demo/db
+    // axios
+    //.get("http://localhost:8080/typicode/demo/db")
     axios
-      .get("http://localhost:8080/angelzarza/prueba-tecnica/607de0be7232c")
+      .get("http://localhost:8080/angelzarza/prueba-tecnica/post")
       .then((response) => {
         this.db = response.data;
         console.log(response);
