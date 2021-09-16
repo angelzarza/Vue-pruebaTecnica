@@ -20,8 +20,17 @@
             <v-img max-height="700px" max-width="500px" :src="myImage"></v-img>
           </div>
           <div class="sizeInputs">
-            <v-text-field label="Nombre" class="mt-4 mx-5"></v-text-field>
-            <v-text-field label="Apellidos" class="mt-4 mx-5"></v-text-field>
+            <v-text-field
+              v-model="name"
+              label="Nombre"
+              class="mt-4 mx-5"
+            ></v-text-field>
+
+            <v-text-field
+              v-model="lastName"
+              label="Apellidos"
+              class="mt-4 mx-5"
+            ></v-text-field>
 
             <v-menu
               ref="menu"
@@ -44,7 +53,6 @@
               </template>
               <v-date-picker
                 v-model="date"
-                :active-picker.sync="activePicker"
                 :max="
                   new Date(Date.now() - new Date().getTimezoneOffset() * 60000)
                     .toISOString()
@@ -55,18 +63,28 @@
               ></v-date-picker>
             </v-menu>
 
-            <v-select :items="items" label="Sexo" class="mt-4 mx-5"></v-select>
-            <v-text-field label="Clinica" class="mt-4 mx-5"></v-text-field>
+            <v-select
+              v-model="gender"
+              :items="items"
+              label="Sexo"
+              class="mt-4 mx-5"
+            ></v-select>
+
+            <v-text-field
+              v-model="clinic"
+              label="Clinica"
+              class="mt-4 mx-5"
+            ></v-text-field>
 
             <v-checkbox
-              v-model="ex4"
+              v-model="checkbox1"
               label="Recortar dejando 1-3 mm de encía"
               color="success"
               class="mt-4 mx-5"
               hide-details
             ></v-checkbox>
             <v-checkbox
-              v-model="ex4"
+              v-model="checkbox2"
               label="Recortar a nivel de los cuellos"
               color="success"
               class="mt-4 mx-5"
@@ -76,14 +94,14 @@
             <div class="mt-4" style="display: flex">
               <p class="mt-4 mx-5">¿SecretRetainer?</p>
               <v-checkbox
-                v-model="ex4"
+                v-model="checkbox3"
                 label="SI"
                 color="success"
                 class="mt-4 mx-5"
                 hide-details
               ></v-checkbox>
               <v-checkbox
-                v-model="ex4"
+                v-model="checkbox4"
                 label="NO"
                 color="success"
                 class="mt-4 mx-5"
@@ -93,7 +111,9 @@
           </div>
         </div>
         <v-card-actions class="justify-start mt-4">
-          <v-btn text @click="dialog.value = false">Close</v-btn>
+          <v-btn text>Guardar</v-btn>
+          <v-btn text @click="dialog.value = false">Cancelar</v-btn>
+          <v-btn text @click="reset">Limpiar</v-btn>
         </v-card-actions>
       </v-card>
     </template>
@@ -108,6 +128,16 @@ export default {
     // Imagen boca
     myImage: require("@/assets/maxilar.jpg"),
 
+    // Formulario
+    name: "",
+    lastName: "",
+    gender: "",
+    clinic: "",
+    checkbox1: null,
+    checkbox2: null,
+    checkbox3: null,
+    checkbox4: null,
+
     // Fecha de nacimiento
     date: null,
     menu: false,
@@ -120,6 +150,19 @@ export default {
     // Guarda la selección en el input
     save(date) {
       this.$refs.menu.save(date);
+    },
+
+    // Limpia los campos de los inputs
+    reset() {
+      this.name = "";
+      this.lastName = "";
+      this.date = "";
+      this.gender = "";
+      this.clinic = "";
+      this.checkbox1 = null;
+      this.checkbox2 = null;
+      this.checkbox3 = null;
+      this.checkbox4 = null;
     },
   },
 };
