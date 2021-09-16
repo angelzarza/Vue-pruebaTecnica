@@ -44,9 +44,7 @@ export default {
     const axios = require("axios");
 
     axios
-      .get(
-        "http://localhost:8080/angelzarza/prueba-tecnica/607de0be7232c/datos_paciente"
-      )
+      .get("http://localhost:8080/angelzarza/prueba-tecnica/607de0be7232c")
       .then((response) => {
         this.db = response.data;
         console.log(response);
