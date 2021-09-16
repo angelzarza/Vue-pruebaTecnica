@@ -414,6 +414,180 @@
 		}
 	},
 
+"g46s57Y02d78ff7":{
+		"datos_paciente":{
+			"nombre": "Gonzalo",
+			"apellidos": "González",
+			"fecha_nacimiento": "22/10/1993",
+			"sexo": "M"
+		},
+		"ficha_dental":{
+			"acadas_tratamiento": "ambas",
+			"dientes_no_mover": [12,45],
+			"estado": "planificando",
+			"clinica": "Dental World", 
+			"objetivo_tratamiento": "Estética y Oclusión",
+			"otros_datos": {
+				"recorte_alineadores":"Recortar dejando 1-3 mm de encía",
+				"alineadores_pasivos":false,
+				"secretretainer":false
+			}
+
+		}
+	},
+
+"g46s57Y06458ff7":{
+		"datos_paciente":{
+			"nombre": "Mariano",
+			"apellidos": "Puerto",
+			"fecha_nacimiento": "12/07/1999",
+			"sexo": "M"
+		},
+		"ficha_dental":{
+			"acadas_tratamiento": "inferior",
+			"dientes_no_mover": [37,47],
+			"estado": "aceptado",
+			"clinica": "Dentalmeria", 
+			"objetivo_tratamiento": "Oclusión",
+			"otros_datos": {
+				"recorte_alineadores":"Recortar a nivel de los cuellos",
+				"alineadores_pasivos":false,
+				"secretretainer":false
+			}
+
+		}
+	},
+"p46s57ji6458ff7":{
+		"datos_paciente":{
+			"nombre": "Anacleto",
+			"apellidos": "Fuertes",
+			"fecha_nacimiento": "12/12/1994",
+			"sexo": "M"
+		},
+		"ficha_dental":{
+			"acadas_tratamiento": "ambas",
+			"dientes_no_mover": [7,32],
+			"estado": "solicitado",
+			"clinica": "Dentolin", 
+			"objetivo_tratamiento": "Estética",
+			"otros_datos": {
+				"recorte_alineadores":"Recortar a nivel de los cuellos",
+				"alineadores_pasivos":false,
+				"secretretainer":false
+			}
+
+		}
+	},
+"b96s73ji6458ff7":{
+		"datos_paciente":{
+			"nombre": "Paolo",
+			"apellidos": "Rosetti",
+			"fecha_nacimiento": "17/09/1981",
+			"sexo": "M"
+		},
+		"ficha_dental":{
+			"acadas_tratamiento": "ambas",
+			"dientes_no_mover": [13,40],
+			"estado": "planificando",
+			"clinica": "Dentix", 
+			"objetivo_tratamiento": "Estética y Oclusión",
+			"otros_datos": {
+				"recorte_alineadores":"Recortar dejando 1-3 mm de encía",
+				"alineadores_pasivos":true,
+				"secretretainer":false
+			}
+
+		}
+	},
+
+"b96s73ug6378ff7":{
+		"datos_paciente":{
+			"nombre": "Victoria",
+			"apellidos": "Dantés",
+			"fecha_nacimiento": "23/06/1995",
+			"sexo": "F"
+		},
+		"ficha_dental":{
+			"acadas_tratamiento": "superior",
+			"dientes_no_mover": [18,23],
+			"estado": "planificando",
+			"clinica": "Dentix", 
+			"objetivo_tratamiento": "Estética y Oclusión",
+			"otros_datos": {
+				"recorte_alineadores":"Recortar dejando 1-3 mm de encía",
+				"alineadores_pasivos":true,
+				"secretretainer":false
+			}
+
+		}
+	},
+
+"b96s73ug6r48yf7":{
+		"datos_paciente":{
+			"nombre": "Eva",
+			"apellidos": "Páez",
+			"fecha_nacimiento": "17/01/1986",
+			"sexo": "F"
+		},
+		"ficha_dental":{
+			"acadas_tratamiento": "ambas",
+			"dientes_no_mover": [14,31],
+			"estado": "planificando",
+			"clinica": "Dental El Valle", 
+			"objetivo_tratamiento": "Estética",
+			"otros_datos": {
+				"recorte_alineadores":"Recortar a nivel de los cuellos",
+				"alineadores_pasivos":false,
+				"secretretainer":false
+			}
+
+		}
+	},
+
+"b96s73ut5r48yf7":{
+		"datos_paciente":{
+			"nombre": "Agustín",
+			"apellidos": "Ramos",
+			"fecha_nacimiento": "24/02/1977",
+			"sexo": "M"
+		},
+		"ficha_dental":{
+			"acadas_tratamiento": "ambas",
+			"dientes_no_mover": [18,36],
+			"estado": "solicitado",
+			"clinica": "Vitaldent", 
+			"objetivo_tratamiento": "Estética y Oclusión",
+			"otros_datos": {
+				"recorte_alineadores":"Recortar a nivel de los cuellos",
+				"alineadores_pasivos":true,
+				"secretretainer":false
+			}
+
+		}
+	},
+
+"b96s43ut5r68yf7":{
+		"datos_paciente":{
+			"nombre": "Antonia",
+			"apellidos": "Chimuelo",
+			"fecha_nacimiento": "12/04/1978",
+			"sexo": "F"
+		},
+		"ficha_dental":{
+			"acadas_tratamiento": "ambas",
+			"dientes_no_mover": [12,46],
+			"estado": "planificando",
+			"clinica": "Móstoles Dental", 
+			"objetivo_tratamiento": "Estética",
+			"otros_datos": {
+				"recorte_alineadores":"Recortar dejando 1-3 mm de encía",
+				"alineadores_pasivos":true,
+				"secretretainer":false
+			}
+
+		}
+	},
+
 "a57s43ut5r68yf9":{
 		"datos_paciente":{
 			"nombre": "Sergio",
