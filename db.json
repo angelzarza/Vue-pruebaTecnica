@@ -5,19 +5,6 @@
 			"apellidos": "Anton",
 			"fecha_nacimiento": "12/04/1978",
 			"sexo": "M"
-		},
-		"ficha_dental":{
-			"acadas_tratamiento": "ambas",
-			"dientes_no_mover": [18,36],
-			"estado": "planificando",
-			"clinica": "Dentix", 
-			"objetivo_tratamiento": "Estética y Oclusión",
-			"otros_datos": {
-				"recorte_alineadores":"Recortar dejando 1-3 mm de encía",
-				"alineadores_pasivos":true,
-				"secretretainer":false
-			}
-
 		}
 	}
 }
