@@ -4,6 +4,7 @@
       outlined
       filled
       append-icon="mdi-magnify"
+      color="blue"
       placeholder="Buscar..."
     ></v-text-field>
   </v-form>

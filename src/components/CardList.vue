@@ -18,6 +18,9 @@
         :items-per-page="5"
         :search="search"
         class="elevation-1"
+        :footer-props="{
+          'items-per-page-text': 'Elementos por página',
+        }"
       >
         <template v-slot:[`item.datos_paciente.nombre`]="{ item }"
           >{{ item.datos_paciente.nombre }}

@@ -1,35 +1,42 @@
 <template>
   <v-container>
-    <v-row style="background-color: #dedede" class="mt-2">
-      <v-col cols="12"> Listado de pacientes </v-col>
-    </v-row>
-    <v-row>
+    <v-row class="mt-5">
       <v-col cols="6">
-        <v-icon color="black">mdi-card-account-details-outline</v-icon>
-        <v-spacer></v-spacer>
-        <h3>Listado de Pacientes</h3>
-        <p style="color: grey">Visualizacion de pacientes</p>
+        <div style="display: flex">
+          <div class="mx-4">
+            <v-icon color="black">mdi-card-account-details-outline</v-icon>
+          </div>
+          <div>
+            <h2>Listado de Pacientes</h2>
+            <p style="color: grey">Visualizacion de pacientes</p>
+          </div>
+        </div>
       </v-col>
+
       <v-col cols="6">
         <Search />
       </v-col>
     </v-row>
+
     <v-row>
       <v-col cols="6">
         <ButtonNew />
         <ButtonCSV />
       </v-col>
     </v-row>
+
     <v-row>
       <v-col cols="6">
         <ButtonsViews />
       </v-col>
     </v-row>
+
     <v-row>
       <v-col cols="12">
         <CardList />
       </v-col>
     </v-row>
+
     <v-row>
       <v-col cols="12">
         <Pagination />
