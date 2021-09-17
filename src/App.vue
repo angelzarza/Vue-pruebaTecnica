@@ -8,6 +8,7 @@
 </template>
 
 <script>
+// Barra de navegación fija para todas las páginas
 import Appbar from "./components/Appbar.vue";
 
 export default {

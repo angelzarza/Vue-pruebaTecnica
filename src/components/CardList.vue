@@ -7,7 +7,7 @@
         <v-text-field
           v-model="search"
           append-icon="mdi-magnify"
-          label="Search"
+          label="Buscar..."
           single-line
           hide-details
         ></v-text-field>
@@ -37,17 +37,24 @@
 </template>
 
 <script>
+// Importamos el json
 import usersData from "../assets/json/pacientes.json";
 
 export default {
   name: "CardList",
   data() {
     return {
+      // Variable para la directiva del buscador en el formulario
       search: "",
+      // Asignamos el json a la variable users
       users: usersData,
 
+      // Valor por defecto para lista despeglable de columna Acciones
+      // Valores para la lista
       selectDefault: "Editar",
       drop: ["Editar", "Finalizar", "Borrar"],
+
+      // Cabeceras de las columnas, la variable value accede al json
       headers: [
         {
           text: "Nombre y Apellidos",
@@ -65,6 +72,7 @@ export default {
   },
 
   methods: {
+    // Metodo que establece los colores en el estado dependiendo de su valor
     getColor(state) {
       if (state == "planificando") return "red";
       else if (state == "facturado") return "orange";

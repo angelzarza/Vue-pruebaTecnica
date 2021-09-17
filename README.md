@@ -1,5 +1,8 @@
 # prueba-tecnica
 
+Lista de tareas
+----------------
+
 - Preparando el repositorio y el template del proyecto (10min)
 
 - Maquetación de la plantilla con algunas funcionalidades responsivas (3h 30min)
@@ -15,6 +18,8 @@ funciona una u otra opción debido al formato del json al no tener un campo full
 - Botón de exportación de CSV, queda retocar la exportación para que muestre datos completos (30min)
 
 - Ventana nuevo paciente con clases SASS (1h)
+
+- Botones formulario nuevo paciente, quedaria hacer reglas de validación (10min)
 
 ## Project setup
 ```
