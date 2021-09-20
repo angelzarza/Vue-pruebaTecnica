@@ -1,5 +1,42 @@
 <template>
   <v-container>
+    <div class="pb-5">
+      <div class="mx-4">
+        <v-btn icon color="black" x-small class="mx-1">
+          <v-icon>mdi-reorder-horizontal</v-icon>
+        </v-btn>
+        <v-btn icon color="black" x-small class="mx-1">
+          <v-icon>mdi-view-grid-outline</v-icon>
+        </v-btn>
+        <v-btn
+          icon
+          color="black"
+          x-small
+          class="mx-1"
+          @click="itemsPerPage = 5"
+        >
+          <v-icon size="17">5</v-icon>
+        </v-btn>
+        <v-btn
+          icon
+          color="black"
+          x-small
+          class="mx-1"
+          @click="itemsPerPage = 10"
+        >
+          <v-icon size="17">10</v-icon>
+        </v-btn>
+        <v-btn
+          icon
+          color="black"
+          x-small
+          class="mx-1"
+          @click="itemsPerPage = 15"
+        >
+          <v-icon size="17">15</v-icon>
+        </v-btn>
+      </div>
+    </div>
     <v-card>
       <v-card-title>
         Pacientes
@@ -15,12 +52,12 @@
       <v-data-table
         :headers="headers"
         :items="users"
-        :items-per-page="5"
+        :items-per-page="itemsPerPage"
         :search="search"
+        :page.sync="page"
+        hide-default-footer
+        @page-count="pageCount = $event"
         class="elevation-1"
-        :footer-props="{
-          'items-per-page-text': 'Elementos por página',
-        }"
       >
         <template v-slot:[`item.datos_paciente.nombre`]="{ item }"
           >{{ item.datos_paciente.nombre }}
@@ -35,6 +72,9 @@
           <v-select v-model="selectDefault" :items="drop"></v-select>
         </template>
       </v-data-table>
+      <div class="text-center pt-2">
+        <v-pagination v-model="page" :length="pageCount"></v-pagination>
+      </div>
     </v-card>
   </v-container>
 </template>
@@ -47,6 +87,13 @@ export default {
   name: "CardList",
   data() {
     return {
+      // Variable para la paginacion
+      page: 1,
+      pageCount: 0,
+
+      // Variable para el numero de elementos por defecto en la lista
+      itemsPerPage: 10,
+
       // Variable para la directiva del buscador en el formulario
       search: "",
       // Asignamos el json a la variable users

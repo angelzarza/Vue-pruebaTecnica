@@ -1,9 +1,25 @@
 <template>
   <vue-json-to-csv :json-data="users" :csv-title="'Pacientes'">
-    <v-btn outlined color="blue" class="ma-2 white--text">
+    <v-btn
+      outlined
+      color="blue"
+      class="ma-2 white--text"
+      @click="alert = !alert"
+    >
       Descargar CSV
       <v-icon right dark> mdi-download </v-icon>
     </v-btn>
+    <v-alert
+      type="success"
+      dark
+      border="left"
+      colored-border
+      dismissible
+      icon="mdi-download"
+      transition="scale-transition"
+      :value="alert"
+      >Descarga iniciada</v-alert
+    >
   </vue-json-to-csv>
 </template>
 
@@ -17,6 +33,7 @@ export default {
 
   data: () => ({
     users: usersData,
+    alert: false,
   }),
   components: {
     VueJsonToCsv,

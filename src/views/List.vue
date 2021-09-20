@@ -26,20 +26,8 @@
     </v-row>
 
     <v-row>
-      <v-col cols="6">
-        <ButtonsViews />
-      </v-col>
-    </v-row>
-
-    <v-row>
       <v-col cols="12">
         <CardList />
-      </v-col>
-    </v-row>
-
-    <v-row>
-      <v-col cols="12">
-        <Pagination />
       </v-col>
     </v-row>
   </v-container>
@@ -50,9 +38,7 @@
 import Search from "../components/Search";
 import ButtonNew from "../components/ButtonNew";
 import ButtonCSV from "../components/ButtonCSV";
-import ButtonsViews from "../components/ButtonsViews";
 import CardList from "../components/CardList";
-import Pagination from "../components/Pagination";
 
 export default {
   name: "List",
@@ -61,9 +47,7 @@ export default {
     Search,
     ButtonNew,
     ButtonCSV,
-    ButtonsViews,
     CardList,
-    Pagination,
   },
 };
 </script>
