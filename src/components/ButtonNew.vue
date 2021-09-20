@@ -14,7 +14,9 @@
     </template>
     <template v-slot:default="dialog">
       <v-card>
-        <v-toolbar color="primary" dark>Nuevo paciente</v-toolbar>
+        <v-toolbar color="primary" dark>
+          <div class="text-h5">Nuevo paciente</div>
+        </v-toolbar>
         <div class="mt-5 mx-5 fieldsDialog">
           <div>
             <v-img max-height="700px" max-width="500px" :src="myImage"></v-img>
