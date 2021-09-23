@@ -1,11 +1,12 @@
 <template>
-  <v-form>
+  <v-form @submit.prevent>
     <v-text-field
       outlined
       filled
       append-icon="mdi-magnify"
       color="blue"
       placeholder="Buscar..."
+      @input="$emit('updateSearch', $event)"
     ></v-text-field>
   </v-form>
 </template>

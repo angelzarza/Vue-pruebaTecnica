@@ -41,13 +41,13 @@
       <v-card-title>
         Pacientes
         <v-spacer></v-spacer>
-        <v-text-field
+        <!-- <v-text-field
           v-model="search"
           append-icon="mdi-magnify"
           label="Buscar..."
           single-line
           hide-details
-        ></v-text-field>
+        ></v-text-field> -->
       </v-card-title>
       <v-data-table
         :headers="headers"
@@ -85,6 +85,12 @@ import usersData from "../assets/json/pacientes.json";
 
 export default {
   name: "CardList",
+
+  // Creamos la prop para :search
+  props: {
+    search: String,
+  },
+
   data() {
     return {
       // Variable para la paginacion
@@ -94,8 +100,6 @@ export default {
       // Variable para el numero de elementos por defecto en la lista
       itemsPerPage: 10,
 
-      // Variable para la directiva del buscador en el formulario
-      search: "",
       // Asignamos el json a la variable users
       users: usersData,
 

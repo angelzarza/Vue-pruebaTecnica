@@ -14,7 +14,7 @@
       </v-col>
 
       <v-col cols="6">
-        <Search />
+        <Search @updateSearch="searchText = $event" />
       </v-col>
     </v-row>
 
@@ -27,7 +27,7 @@
 
     <v-row>
       <v-col cols="12">
-        <CardList />
+        <CardList :search="searchText" />
       </v-col>
     </v-row>
   </v-container>
@@ -42,6 +42,11 @@ import CardList from "../components/CardList";
 
 export default {
   name: "List",
+
+  data: () => ({
+    // Variable que se comunica con el :search de la tabla CardList
+    searchText: "",
+  }),
 
   components: {
     Search,
